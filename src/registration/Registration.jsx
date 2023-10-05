@@ -18,6 +18,11 @@ const Registration = () => {
         if(password.length<6){
          setErrorRegistration('Password should Be At List Six Character');
          return
+        }else if(!/[A-Z]/.test(password)){
+
+            setErrorRegistration('Password should Be At List One Upper Letter');
+            return
+
         }
         console.log(email,password);
         setErrorRegistration('');
